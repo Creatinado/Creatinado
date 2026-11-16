@@ -14,27 +14,6 @@
 
 <br />
 
-## Sobre mim
-
-```diff
-+ $ cat sobre.txt
-+
-+ Nome ........... Creatinado
-+ Função ......... Desenvolvedor
-+ Formação ....... Técnico em IoT · Técnico em Telecom
-+ Linguagem ...... Python
-+
-+ > Programo em Python, principalmente automação e ferramentas de terminal
-+ > Tenho o pé no hardware e na infraestrutura de IoT e telecomunicações
-+ > Gosto de investigar redes a fundo: pilha TCP/IP, protocolos e tráfego
-+ > Estudo cibersegurança para proteger o que eu construo
-+ > Uso IA no dia a dia: Claude Code, GPT Codex e DeepSeek
-+
-+ "Entender como a rede funciona por baixo dos panos e automatizar o resto."
-```
-
-<br />
-
 ## Áreas de atuação
 
 <table>
