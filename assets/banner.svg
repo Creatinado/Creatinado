@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-labelledby="titulo descricao">
+  <title id="titulo">Creatinado</title>
+  <desc id="descricao">Placa de circuito com um chip central chamado Creatinado, ligado por trilhas a Python, IoT, Telecom, Redes, Cibersegurança e IA</desc>
+
+  <defs>
+    <linearGradient id="placa" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#000000"/>
+      <stop offset="1" stop-color="#03100B"/>
+    </linearGradient>
+    <pattern id="malha" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0 H0 V24" fill="none" stroke="#00D4AA" stroke-opacity="0.06"/>
+    </pattern>
+    <linearGradient id="encapsulamento" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#06140F"/>
+      <stop offset="1" stop-color="#010504"/>
+    </linearGradient>
+    <clipPath id="recorte">
+      <rect width="1200" height="300" rx="18"/>
+    </clipPath>
+    <filter id="brilhoBranco" filterUnits="userSpaceOnUse" x="0" y="0" width="1200" height="300">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#FFFFFF" flood-opacity="0.9"/>
+    </filter>
+    <filter id="brilhoVerde" filterUnits="userSpaceOnUse" x="0" y="0" width="1200" height="300">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#00D4AA" flood-opacity="0.8"/>
+    </filter>
+    <filter id="sombra" filterUnits="userSpaceOnUse" x="340" y="60" width="520" height="200">
+      <feDropShadow dx="0" dy="0" stdDeviation="12" flood-color="#00D4AA" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <style>
+    .mono { font-family: 'Fira Code', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; }
+    .sans { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Ubuntu, 'Helvetica Neue', Arial, sans-serif; }
+    .serigrafia { font-size: 10px; fill: #1F7A64; letter-spacing: 1px; }
+    .modulo { font-size: 15px; font-weight: 600; fill: #00D4AA; }
+  </style>
+
+  <g clip-path="url(#recorte)">
+    <!-- Placa -->
+    <rect width="1200" height="300" fill="url(#placa)"/>
+    <rect width="1200" height="300" fill="url(#malha)"/>
+
+    <!-- Furos de fixação (terminais) -->
+    <g fill="#000000" stroke="#FFFFFF" stroke-width="2">
+      <circle cx="22" cy="22" r="7"/>
+      <circle cx="1178" cy="22" r="7"/>
+      <circle cx="22" cy="278" r="7"/>
+      <circle cx="1178" cy="278" r="7"/>
+    </g>
+
+    <!-- Trilhas decorativas dos pinos de cima e de baixo -->
+    <g fill="none" stroke="#00D4AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.35">
+      <path d="M440 86 V62 L416 38 H330"/>
+      <path d="M480 86 V50 L460 30 V0"/>
+      <path d="M520 86 V66"/>
+      <path d="M560 86 V44 L580 24 V0"/>
+      <path d="M600 86 V60"/>
+      <path d="M640 86 V44 L620 24 V0"/>
+      <path d="M680 86 V66"/>
+      <path d="M720 86 V50 L740 30 V0"/>
+      <path d="M760 86 V62 L784 38 H870"/>
+      <path d="M440 214 V238 L416 262 H330"/>
+      <path d="M480 214 V250 L460 270 V300"/>
+      <path d="M520 214 V234"/>
+      <path d="M560 214 V256 L580 276 V300"/>
+      <path d="M600 214 V240"/>
+      <path d="M640 214 V256 L620 276 V300"/>
+      <path d="M680 214 V234"/>
+      <path d="M720 214 V250 L740 270 V300"/>
+      <path d="M760 214 V238 L784 262 H870"/>
+    </g>
+    <g fill="#000000" stroke="#FFFFFF" stroke-width="2">
+      <circle cx="330" cy="38" r="4"/>
+      <circle cx="520" cy="66" r="4"/>
+      <circle cx="600" cy="60" r="4"/>
+      <circle cx="680" cy="66" r="4"/>
+      <circle cx="870" cy="38" r="4"/>
+      <circle cx="330" cy="262" r="4"/>
+      <circle cx="520" cy="234" r="4"/>
+      <circle cx="600" cy="240" r="4"/>
+      <circle cx="680" cy="234" r="4"/>
+      <circle cx="870" cy="262" r="4"/>
+    </g>
+
+    <!-- Trilhas principais: módulos ligados ao chip -->
+    <g fill="none" stroke="#00A884" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M220 60 H300 L360 120 H388"/>
+      <path d="M220 150 H388"/>
+      <path d="M220 240 H300 L360 180 H388"/>
+      <path d="M812 120 H840 L900 60 H980"/>
+      <path d="M812 150 H980"/>
+      <path d="M812 180 H840 L900 240 H980"/>
+    </g>
+
+    <!-- Corrente: pulsos brancos correndo pelas trilhas -->
+    <g fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 104" stroke-dashoffset="14" filter="url(#brilhoBranco)">
+      <path pathLength="100" d="M220 60 H300 L360 120 H388"><animate attributeName="stroke-dashoffset" from="14" to="-102" dur="2.6s" repeatCount="indefinite"/></path>
+      <path pathLength="100" d="M220 150 H388"><animate attributeName="stroke-dashoffset" from="14" to="-102" dur="2.2s" begin="0.9s" repeatCount="indefinite"/></path>
+      <path pathLength="100" d="M220 240 H300 L360 180 H388"><animate attributeName="stroke-dashoffset" from="14" to="-102" dur="2.8s" begin="1.7s" repeatCount="indefinite"/></path>
+      <path pathLength="100" d="M812 120 H840 L900 60 H980"><animate attributeName="stroke-dashoffset" from="14" to="-102" dur="2.7s" begin="1.3s" repeatCount="indefinite"/></path>
+      <path pathLength="100" d="M812 150 H980"><animate attributeName="stroke-dashoffset" from="14" to="-102" dur="2.3s" begin="0.4s" repeatCount="indefinite"/></path>
+      <path pathLength="100" d="M812 180 H840 L900 240 H980"><animate attributeName="stroke-dashoffset" from="14" to="-102" dur="2.9s" begin="2.1s" repeatCount="indefinite"/></path>
+    </g>
+
+    <!-- Módulos da esquerda -->
+    <g>
+      <rect x="40" y="42" width="180" height="36" rx="8" fill="#020806" stroke="#00D4AA" stroke-width="1.5"/>
+      <rect x="40" y="132" width="180" height="36" rx="8" fill="#020806" stroke="#00D4AA" stroke-width="1.5"/>
+      <rect x="40" y="222" width="180" height="36" rx="8" fill="#020806" stroke="#00D4AA" stroke-width="1.5"/>
+      <g fill="#FFFFFF">
+        <rect x="215" y="55" width="9" height="10" rx="1.5"/>
+        <rect x="215" y="145" width="9" height="10" rx="1.5"/>
+        <rect x="215" y="235" width="9" height="10" rx="1.5"/>
+      </g>
+      <g fill="#00D4AA">
+        <circle cx="60" cy="60" r="4.5"><animate attributeName="opacity" values="1;0.3;1" dur="2.6s" repeatCount="indefinite"/></circle>
+        <circle cx="60" cy="150" r="4.5"><animate attributeName="opacity" values="1;0.3;1" dur="2.2s" begin="0.9s" repeatCount="indefinite"/></circle>
+        <circle cx="60" cy="240" r="4.5"><animate attributeName="opacity" values="1;0.3;1" dur="2.8s" begin="1.7s" repeatCount="indefinite"/></circle>
+      </g>
+      <text x="138" y="65" text-anchor="middle" class="mono modulo">Python</text>
+      <text x="138" y="155" text-anchor="middle" class="mono modulo">IoT</text>
+      <text x="138" y="245" text-anchor="middle" class="mono modulo">Telecom</text>
+      <text x="42" y="36" class="mono serigrafia">J1</text>
+      <text x="42" y="126" class="mono serigrafia">J2</text>
+      <text x="42" y="216" class="mono serigrafia">J3</text>
+    </g>
+
+    <!-- Módulos da direita -->
+    <g>
+      <rect x="980" y="42" width="180" height="36" rx="8" fill="#020806" stroke="#00D4AA" stroke-width="1.5"/>
+      <rect x="980" y="132" width="180" height="36" rx="8" fill="#020806" stroke="#00D4AA" stroke-width="1.5"/>
+      <rect x="980" y="222" width="180" height="36" rx="8" fill="#020806" stroke="#00D4AA" stroke-width="1.5"/>
+      <g fill="#FFFFFF">
+        <rect x="976" y="55" width="9" height="10" rx="1.5"/>
+        <rect x="976" y="145" width="9" height="10" rx="1.5"/>
+        <rect x="976" y="235" width="9" height="10" rx="1.5"/>
+      </g>
+      <g fill="#00D4AA">
+        <circle cx="1140" cy="60" r="4.5"><animate attributeName="opacity" values="1;0.3;1" dur="2.7s" begin="1.3s" repeatCount="indefinite"/></circle>
+        <circle cx="1140" cy="150" r="4.5"><animate attributeName="opacity" values="1;0.3;1" dur="2.3s" begin="0.4s" repeatCount="indefinite"/></circle>
+        <circle cx="1140" cy="240" r="4.5"><animate attributeName="opacity" values="1;0.3;1" dur="2.9s" begin="2.1s" repeatCount="indefinite"/></circle>
+      </g>
+      <text x="1062" y="65" text-anchor="middle" class="mono modulo">Redes</text>
+      <text x="1062" y="155" text-anchor="middle" class="mono modulo">Cibersegurança</text>
+      <text x="1062" y="245" text-anchor="middle" class="mono modulo">IA</text>
+      <text x="1158" y="36" text-anchor="end" class="mono serigrafia">J4</text>
+      <text x="1158" y="126" text-anchor="end" class="mono serigrafia">J5</text>
+      <text x="1158" y="216" text-anchor="end" class="mono serigrafia">J6</text>
+    </g>
+
+    <!-- Chip central: terminais brancos -->
+    <g fill="#FFFFFF">
+      <rect x="386" y="116" width="16" height="8" rx="1.5"/>
+      <rect x="386" y="146" width="16" height="8" rx="1.5"/>
+      <rect x="386" y="176" width="16" height="8" rx="1.5"/>
+      <rect x="798" y="116" width="16" height="8" rx="1.5"/>
+      <rect x="798" y="146" width="16" height="8" rx="1.5"/>
+      <rect x="798" y="176" width="16" height="8" rx="1.5"/>
+      <rect x="436" y="85" width="8" height="12" rx="1.5"/>
+      <rect x="476" y="85" width="8" height="12" rx="1.5"/>
+      <rect x="516" y="85" width="8" height="12" rx="1.5"/>
+      <rect x="556" y="85" width="8" height="12" rx="1.5"/>
+      <rect x="596" y="85" width="8" height="12" rx="1.5"/>
+      <rect x="636" y="85" width="8" height="12" rx="1.5"/>
+      <rect x="676" y="85" width="8" height="12" rx="1.5"/>
+      <rect x="716" y="85" width="8" height="12" rx="1.5"/>
+      <rect x="756" y="85" width="8" height="12" rx="1.5"/>
+      <rect x="436" y="203" width="8" height="12" rx="1.5"/>
+      <rect x="476" y="203" width="8" height="12" rx="1.5"/>
+      <rect x="516" y="203" width="8" height="12" rx="1.5"/>
+      <rect x="556" y="203" width="8" height="12" rx="1.5"/>
+      <rect x="596" y="203" width="8" height="12" rx="1.5"/>
+      <rect x="636" y="203" width="8" height="12" rx="1.5"/>
+      <rect x="676" y="203" width="8" height="12" rx="1.5"/>
+      <rect x="716" y="203" width="8" height="12" rx="1.5"/>
+      <rect x="756" y="203" width="8" height="12" rx="1.5"/>
+    </g>
+    <rect x="400" y="95" width="400" height="110" rx="10" fill="#010504" filter="url(#sombra)"/>
+    <rect x="400" y="95" width="400" height="110" rx="10" fill="url(#encapsulamento)" stroke="#00D4AA" stroke-width="1.5"/>
+    <circle cx="418" cy="113" r="4.5" fill="#000000" stroke="#00A884"/>
+    <circle cx="782" cy="113" r="4" fill="#00D4AA" filter="url(#brilhoVerde)">
+      <animate attributeName="opacity" values="1;1;0.25;1" keyTimes="0;0.7;0.85;1" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <text x="600" y="162" text-anchor="middle" class="sans" font-size="56" font-weight="800" letter-spacing="1" fill="#00D4AA" filter="url(#brilhoVerde)">Creatinado</text>
+    <text x="600" y="188" text-anchor="middle" class="mono" font-size="12" fill="#1F9A7C" letter-spacing="1.5">github.com/Creatinado</text>
+
+    <!-- Serigrafia -->
+    <text x="400" y="80" class="mono serigrafia">U1</text>
+    <text x="44" y="288" class="mono serigrafia">CRT-01 · REV 1.0</text>
+  </g>
+</svg>
